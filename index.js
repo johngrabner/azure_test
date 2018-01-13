@@ -2,6 +2,8 @@
 
 const app = require("./app/app.js")
 
-app.listen(3000, function () {
-    console.log('Express started on http://localhost:' + app.get('port') + ' press Ctrl-C to terminate');
+var port = process.env.PORT || 1337;
+
+app.listen(port, function () {
+    console.log('Express started on http://localhost:' + port + ' press Ctrl-C to terminate');
 });
